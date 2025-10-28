@@ -129,6 +129,69 @@ The scope of protection covers:
 - ❌ **Mobile platforms** (no protection)
 - ❌ **Some local communications** (not applicable)
 
+## .onion Address Usage
+
+### Core Configuration
+
+**Main Tor Domain Mapping** (`packages/urls/src/tor.ts`):
+```typescript
+export const TOR_URLS: { [key: string]: string } = {
+    'trezor.io': 'trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion',
+};
+```
+
+**Connect Package Config** (`packages/connect/src/data/config.ts`):
+- Includes the same onion domain mapping
+- Whitelists the onion address for secure connections
+- Used for Trezor Connect API communication
+
+### URL Conversion Logic
+
+The `urlToOnion` function (`packages/utils/src/urlToOnion.ts`) converts clearnet URLs to onion addresses:
+
+1. **Pattern matching**: Extracts protocol, subdomains, domain, and path from URLs
+2. **Domain lookup**: Checks if the domain has an onion equivalent in the mapping
+3. **URL reconstruction**: Builds new URL with onion domain, preserving subdomains and paths
+
+**Example conversions**:
+- `https://trezor.io/` → `http://trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion/`
+- `https://cdn.trezor.io/image.png` → `http://cdn.trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion/image.png`
+- `wss://trezor.io` → `ws://trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion`
+
+### Tor Integration
+
+**Tor Status Management** (`packages/suite/src/utils/suite/tor.ts`):
+- Checks if Tor is enabled/running
+- Detects onion URLs with `isOnionUrl()`
+- Provides `getTorUrlIfAvailable()` for conditional URL conversion
+
+**User Control** (`packages/suite/src/views/settings/SettingsGeneral/TorOnionLinks.tsx`):
+- Settings toggle for "Onion links"
+- Users can enable/disable automatic onion redirection
+- Analytics tracking for Tor usage preferences
+
+**External Link Handling** (`packages/suite/src/hooks/suite/useExternalLink.ts`):
+- Automatically converts external links to onion versions when:
+  - Tor is enabled
+  - User has enabled onion links preference
+  - Onion version exists for the domain
+
+### CoinJoin Integration
+
+**Extended Domain Mapping** (`packages/suite/src/services/coinjoin/config.ts`):
+- Includes additional onion domains for CoinJoin services:
+  - `wasabiwallet.io` → `wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion`
+  - `wasabiwallet.co` → `testwnp3fugjln6vh5vpj7mvq3lkqqwjj3c2aafyu7laxz42kgwh2rad.onion`
+
+### Security Considerations
+
+1. **Domain verification**: Only pre-approved domains have onion equivalents
+2. **Protocol handling**: HTTP/HTTPS/WSS all convert appropriately
+3. **Subdomain preservation**: Maintains full URL structure for compatibility
+4. **Fallback behavior**: Returns original URL if no onion mapping exists
+
+The .onion addresses enable users to access Trezor services with enhanced privacy through the Tor network, automatically handling URL conversion when Tor is enabled and the user opts into onion link usage.
+
 ## Analysis Metadata
 
 **Analysis Date**: October 28, 2025  
