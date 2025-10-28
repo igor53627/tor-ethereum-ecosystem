@@ -2,6 +2,8 @@
 
 A comprehensive directory of privacy-preserving tools and infrastructure for the Ethereum ecosystem that leverage the Tor network.
 
+🌐 **Live Site**: https://igor53627.github.io/tor-ethereum-ecosystem/
+
 ## Overview
 
 This website showcases wallets, RPC providers, load balancers, and SDKs that integrate Tor to enhance privacy and censorship resistance for Ethereum users.
@@ -54,7 +56,7 @@ Developer tools for building privacy-preserving wallets
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/tor-ethereum-ecosystem.git
+git clone https://github.com/igor53627/tor-ethereum-ecosystem.git
 
 # Navigate to project directory
 cd tor-ethereum-ecosystem
@@ -164,6 +166,22 @@ tor-ethereum-ecosystem/
 ├── index.html
 ├── package.json
 └── vite.config.ts
+```
+
+## Deployment
+
+This site is automatically deployed to GitHub Pages using GitHub Actions.
+
+### How it works:
+1. Push changes to the `main` branch
+2. GitHub Actions automatically builds the project
+3. The built files are deployed to GitHub Pages
+4. Site is available at: https://igor53627.github.io/tor-ethereum-ecosystem/
+
+### Manual Deployment (if needed):
+```bash
+npm run build
+# The dist/ folder contains the production build
 ```
 
 ## Privacy & Security
