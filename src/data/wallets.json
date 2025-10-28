@@ -1,0 +1,46 @@
+[
+  {
+    "id": "cake-wallet",
+    "name": "Cake Wallet",
+    "description": "Multi-currency wallet with built-in Tor support for privacy-focused transactions",
+    "website": "https://cakewallet.com",
+    "github": "https://github.com/cake-tech/cake_wallet",
+    "tags": ["native"],
+    "category": "wallet"
+  },
+  {
+    "id": "hinkal-wallet",
+    "name": "Hinkal Wallet",
+    "description": "Privacy-preserving wallet with Snowflake proxy support for censorship resistance",
+    "website": "https://hinkal.pro",
+    "github": "https://github.com/Hinkal-Protocol",
+    "tags": ["snowflake"],
+    "category": "wallet"
+  },
+  {
+    "id": "brume-wallet",
+    "name": "Brume Wallet",
+    "description": "Ethereum wallet with integrated Snowflake proxy for enhanced privacy",
+    "website": "https://brume.money",
+    "github": "https://github.com/brumewallet",
+    "tags": ["snowflake"],
+    "category": "wallet"
+  },
+  {
+    "id": "ambire-wallet",
+    "name": "Ambire Wallet",
+    "description": "Smart wallet with Tor integration coming soon",
+    "website": "https://www.ambire.com",
+    "github": "https://github.com/AmbireTech",
+    "tags": ["snowflake", "WIP"],
+    "category": "wallet"
+  },
+  {
+    "id": "lunascape-wallet",
+    "name": "Lunascape Wallet",
+    "description": "Browser with built-in wallet with Tor support under development",
+    "website": "https://lunascape.io",
+    "tags": ["WIP"],
+    "category": "wallet"
+  }
+]

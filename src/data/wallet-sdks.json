@@ -1,0 +1,10 @@
+[
+  {
+    "id": "kohaku",
+    "name": "Kohaku",
+    "description": "Privacy-focused wallet SDK with Tor support under development",
+    "github": "https://github.com/kohaku-wallet",
+    "tags": ["WIP"],
+    "category": "wallet-sdk"
+  }
+]
