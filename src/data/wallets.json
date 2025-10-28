@@ -54,5 +54,15 @@
     "tags": ["socks5"],
     "category": "wallet",
     "memo": "memos/unstoppable.md"
+  },
+  {
+    "id": "trezor-suite",
+    "name": "Trezor Suite",
+    "description": "Trezor Suite app makes it easy and secure to manage, buy, sell, and swap your crypto",
+    "website": "https://trezor.io/",
+    "github": "https://github.com/trezor/trezor-suite",
+    "tags": ["socks5"],
+    "category": "wallet",
+    "memo": "memos/trezor.md"
   }
 ]
