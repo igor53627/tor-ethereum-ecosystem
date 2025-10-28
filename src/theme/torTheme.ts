@@ -66,19 +66,19 @@ const torTheme = extendTheme({
     Badge: {
       variants: {
         wip: {
-          bg: '#FF6F61', // Living Coral (Pantone 2019)
+          bg: '#FF6F61',
           color: 'white',
         },
         socks5: {
-          bg: '#0F4C81', // Classic Blue (Pantone 2020)
+          bg: '#0F4C81',
           color: 'white',
         },
         snowflake: {
-          bg: '#88B04B', // Greenery (Pantone 2017)
+          bg: '#88B04B',
           color: 'white',
         },
         '.onion': {
-          bg: '#6667AB', // Very Peri (Pantone 2022)
+          bg: '#6667AB',
           color: 'white',
         },
       },
