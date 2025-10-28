@@ -5,7 +5,7 @@
     "description": "High-performance load balancer for Ethereum nodes with Tor support in development",
     "website": "https://nodecore.io",
     "github": "https://github.com/nodecore",
-    "tags": ["WIP"],
+    "tags": [".onion", "WIP"],
     "category": "loadbalancer"
   },
   {
@@ -14,7 +14,7 @@
     "description": "Fault-tolerant load balancer for blockchain APIs with planned Tor integration",
     "website": "https://github.com/emeraldpay/dshackle",
     "github": "https://github.com/emeraldpay/dshackle",
-    "tags": ["WIP"],
+    "tags": [".onion", "WIP"],
     "category": "loadbalancer"
   }
 ]

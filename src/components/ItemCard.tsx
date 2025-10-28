@@ -12,10 +12,13 @@ import {
   Box,
   Flex,
   Badge,
+  Button,
+  useDisclosure,
 } from '@chakra-ui/react';
-import { FaGithub, FaExternalLinkAlt, FaCopy, FaCheck } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaCopy, FaCheck, FaFileAlt } from 'react-icons/fa';
 import { SiTorbrowser } from 'react-icons/si';
 import StatusBadge from './StatusBadge';
+import MemoModal from './MemoModal';
 import type { Item } from '../types';
 
 interface ItemCardProps {
@@ -26,6 +29,7 @@ const ItemCard = ({ item }: ItemCardProps) => {
   const onionUrl = 'onionUrl' in item ? item.onionUrl : undefined;
   const { hasCopied, onCopy } = useClipboard(onionUrl || '');
   const toast = useToast();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleCopy = () => {
     onCopy();
@@ -121,9 +125,29 @@ const ItemCard = ({ item }: ItemCardProps) => {
                 </HStack>
               </Link>
             )}
+            {item.memo && (
+              <Button
+                size="sm"
+                variant="ghost"
+                colorScheme="tor"
+                leftIcon={<FaFileAlt />}
+                onClick={onOpen}
+              >
+                Read Analysis
+              </Button>
+            )}
           </HStack>
         </VStack>
       </CardBody>
+
+      {item.memo && (
+        <MemoModal
+          isOpen={isOpen}
+          onClose={onClose}
+          memoPath={item.memo}
+          itemName={item.name}
+        />
+      )}
     </Card>
   );
 };

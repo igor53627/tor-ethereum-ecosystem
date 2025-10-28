@@ -5,8 +5,9 @@
     "description": "Multi-currency wallet with built-in Tor support for privacy-focused transactions",
     "website": "https://cakewallet.com",
     "github": "https://github.com/cake-tech/cake_wallet",
-    "tags": ["native"],
-    "category": "wallet"
+    "tags": ["socks5"],
+    "category": "wallet",
+    "memo": "memos/cake.md"
   },
   {
     "id": "hinkal-wallet",
@@ -24,7 +25,8 @@
     "website": "https://brume.money",
     "github": "https://github.com/brumewallet",
     "tags": ["snowflake"],
-    "category": "wallet"
+    "category": "wallet",
+    "memo": "memos/brume.md"
   },
   {
     "id": "ambire-wallet",
@@ -40,7 +42,17 @@
     "name": "Lunascape Wallet",
     "description": "Browser with built-in wallet with Tor support under development",
     "website": "https://lunascape.io",
-    "tags": ["WIP"],
+    "tags": ["snowflake", "WIP"],
     "category": "wallet"
+  },
+  {
+    "id": "unstoppable-wallet",
+    "name": "Unstoppable Wallet",
+    "description": "Multi-currency wallet with comprehensive native Tor integration on Android",
+    "website": "https://unstoppable.money/",
+    "github": "https://github.com/horizontalsystems",
+    "tags": ["socks5"],
+    "category": "wallet",
+    "memo": "memos/unstoppable.md"
   }
 ]

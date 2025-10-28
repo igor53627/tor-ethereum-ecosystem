@@ -6,6 +6,7 @@ export interface BaseItem {
   github?: string;
   tags: string[];
   category: string;
+  memo?: string;
 }
 
 export interface Wallet extends BaseItem {
