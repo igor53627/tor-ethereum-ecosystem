@@ -66,20 +66,36 @@ const torTheme = extendTheme({
     Badge: {
       variants: {
         wip: {
-          bg: '#FF6F61',
-          color: 'white',
+          bg: 'rgba(255, 111, 97, 0.15)',
+          color: '#D45A4E',
+          _dark: {
+            bg: 'rgba(255, 111, 97, 0.2)',
+            color: '#FF8F85',
+          },
         },
         socks5: {
-          bg: '#0F4C81',
-          color: 'white',
+          bg: 'rgba(15, 76, 129, 0.15)',
+          color: '#0F4C81',
+          _dark: {
+            bg: 'rgba(15, 76, 129, 0.2)',
+            color: '#5B9BD5',
+          },
         },
         snowflake: {
-          bg: '#88B04B',
-          color: 'white',
+          bg: 'rgba(136, 176, 75, 0.15)',
+          color: '#6B8E3B',
+          _dark: {
+            bg: 'rgba(136, 176, 75, 0.2)',
+            color: '#A8C97F',
+          },
         },
         '.onion': {
-          bg: '#6667AB',
-          color: 'white',
+          bg: 'rgba(102, 103, 171, 0.15)',
+          color: '#5355A0',
+          _dark: {
+            bg: 'rgba(102, 103, 171, 0.2)',
+            color: '#8B8DC9',
+          },
         },
       },
     },
