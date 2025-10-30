@@ -27,4 +27,9 @@ export interface WalletSDK extends BaseItem {
   category: 'wallet-sdk';
 }
 
-export type Item = Wallet | RPCProvider | LoadBalancer | WalletSDK;
+export interface Explorer extends BaseItem {
+  category: 'explorer';
+  onionUrl?: string;
+}
+
+export type Item = Wallet | RPCProvider | LoadBalancer | WalletSDK | Explorer;
