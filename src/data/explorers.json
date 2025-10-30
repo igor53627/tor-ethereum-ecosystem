@@ -1,0 +1,11 @@
+[
+  {
+    "id": "blockscout",
+    "name": "Blockscout",
+    "description": "Open-source blockchain explorer for EVM-based blockchains",
+    "website": "https://blockscout.com/",
+    "github": "https://github.com/blockscout",
+    "tags": ["WIP"],
+    "category": "explorer"
+  }
+]
