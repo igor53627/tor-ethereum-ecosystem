@@ -6,7 +6,7 @@ A comprehensive directory of privacy-preserving tools and infrastructure for the
 
 ## Overview
 
-This website showcases wallets, RPC providers, load balancers, and SDKs that integrate Tor to enhance privacy and censorship resistance for Ethereum users.
+This website showcases wallets, RPC providers, explorers, load balancers, and SDKs that integrate Tor to enhance privacy and censorship resistance for Ethereum users.
 
 ## Features
 
@@ -18,24 +18,32 @@ This website showcases wallets, RPC providers, load balancers, and SDKs that int
 
 ## Categories
 
-### Wallets
+### <a name="wallets"></a>Wallets
 Privacy-focused wallets with Tor integration
 - Native Tor support
 - Snowflake proxy integration
 - Work in progress implementations
 
-### RPC Providers
+### <a name="rpc-providers"></a>RPC Providers
 Decentralized and privacy-preserving RPC endpoints
 - Free tier options
 - No API key required services
 - Tor hidden service support
 
-### Load Balancers
+### <a name="explorers"></a>Explorers
+Blockchain explorers for Ethereum networks
+- **Blockscout** - Open-source blockchain explorer for EVM-based blockchains
+  - .onion: `blockscout[placeholder].onion` (WIP)
+  - Website: https://blockscout.com/
+  - GitHub: https://github.com/blockscout
+  - Tags: WIP, .onion
+
+### <a name="load-balancers"></a>Load Balancers
 Infrastructure for distributing requests across multiple nodes
 - High-performance solutions
 - Fault-tolerant designs
 
-### Wallet SDKs
+### <a name="sdks"></a>SDKs
 Developer tools for building privacy-preserving wallets
 
 ## Tech Stack
