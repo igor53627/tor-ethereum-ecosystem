@@ -16,36 +16,6 @@ This website showcases wallets, RPC providers, explorers, load balancers, and SD
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **External Links**: Direct links to websites and GitHub repositories
 
-## Categories
-
-### <a name="wallets"></a>Wallets
-Privacy-focused wallets with Tor integration
-- Native Tor support
-- Snowflake proxy integration
-- Work in progress implementations
-
-### <a name="rpc-providers"></a>RPC Providers
-Decentralized and privacy-preserving RPC endpoints
-- Free tier options
-- No API key required services
-- Tor hidden service support
-
-### <a name="explorers"></a>Explorers
-Blockchain explorers for Ethereum networks
-- **Blockscout** - Open-source blockchain explorer for EVM-based blockchains
-  - .onion: `blockscout[placeholder].onion` (WIP)
-  - Website: https://blockscout.com/
-  - GitHub: https://github.com/blockscout
-  - Tags: WIP, .onion
-
-### <a name="load-balancers"></a>Load Balancers
-Infrastructure for distributing requests across multiple nodes
-- High-performance solutions
-- Fault-tolerant designs
-
-### <a name="sdks"></a>SDKs
-Developer tools for building privacy-preserving wallets
-
 ## Tech Stack
 
 - **Framework**: React 18 + Vite
@@ -95,6 +65,7 @@ We welcome contributions from the community! Here's how you can help:
 2. Navigate to the appropriate JSON file in `src/data/`:
    - `wallets.json` - for wallets
    - `rpc-providers.json` - for RPC providers
+   - `explorers.json` - for blockchain explorers
    - `loadbalancers.json` - for load balancers
    - `wallet-sdks.json` - for wallet SDKs
 
@@ -164,6 +135,7 @@ tor-ethereum-ecosystem/
 │   ├── data/                # JSON data files
 │   │   ├── wallets.json
 │   │   ├── rpc-providers.json
+│   │   ├── explorers.json
 │   │   ├── loadbalancers.json
 │   │   └── wallet-sdks.json
 │   ├── theme/               # Chakra UI theme

@@ -8,6 +8,7 @@ import type { Item } from './types';
 // Import data
 import walletsData from './data/wallets.json';
 import rpcProvidersData from './data/rpc-providers.json';
+import explorersData from './data/explorers.json';
 import loadbalancersData from './data/loadbalancers.json';
 import walletSdksData from './data/wallet-sdks.json';
 
@@ -19,6 +20,7 @@ function App() {
   const allItems: Item[] = [
     ...walletsData,
     ...rpcProvidersData,
+    ...explorersData,
     ...loadbalancersData,
     ...walletSdksData,
   ] as Item[];
@@ -48,6 +50,9 @@ function App() {
   const rpcProviders = filteredItems.filter(
     (item) => item.category === 'rpc-provider'
   );
+  const explorers = filteredItems.filter(
+    (item) => item.category === 'explorer'
+  );
   const loadbalancers = filteredItems.filter(
     (item) => item.category === 'loadbalancer'
   );
@@ -72,6 +77,11 @@ function App() {
           title="RPC Providers"
           items={rpcProviders}
           id="rpc-providers"
+        />
+        <CategorySection
+          title="Explorers"
+          items={explorers}
+          id="explorers"
         />
         <CategorySection
           title="Load Balancers"
