@@ -79,7 +79,6 @@ const ItemCard = ({ item }: ItemCardProps) => {
                     fontSize="xs"
                     fontFamily="mono"
                     color="tor.200"
-                    isTruncated
                     wordBreak="break-all"
                   >
                     {onionUrl}
