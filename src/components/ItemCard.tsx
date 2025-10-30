@@ -15,7 +15,7 @@ import {
   Button,
   useDisclosure,
 } from '@chakra-ui/react';
-import { FaGithub, FaExternalLinkAlt, FaCopy, FaCheck, FaFileAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaCopy, FaCheck, FaFileAlt, FaBook } from 'react-icons/fa';
 import { SiTorbrowser } from 'react-icons/si';
 import StatusBadge from './StatusBadge';
 import MemoModal from './MemoModal';
@@ -79,7 +79,6 @@ const ItemCard = ({ item }: ItemCardProps) => {
                     fontSize="xs"
                     fontFamily="mono"
                     color="tor.200"
-                    isTruncated
                     wordBreak="break-all"
                   >
                     {onionUrl}
@@ -122,6 +121,14 @@ const ItemCard = ({ item }: ItemCardProps) => {
                 <HStack spacing={1} fontSize="sm" color="tor.500">
                   <FaGithub size={14} />
                   <Text>GitHub</Text>
+                </HStack>
+              </Link>
+            )}
+            {item.docs && (
+              <Link href={item.docs} isExternal>
+                <HStack spacing={1} fontSize="sm" color="tor.500">
+                  <FaBook size={14} />
+                  <Text>Docs</Text>
                 </HStack>
               </Link>
             )}

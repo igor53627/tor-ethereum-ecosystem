@@ -4,6 +4,7 @@ export interface BaseItem {
   description: string;
   website?: string;
   github?: string;
+  docs?: string;
   tags: string[];
   category: string;
   memo?: string;

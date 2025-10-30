@@ -4,9 +4,10 @@
     "name": "DRPC",
     "description": "Decentralized RPC infrastructure with free tier and no API key required",
     "website": "https://drpc.org",
-    "onionUrl": "drpc3h7x2z4k5m6n7p8q9r2s3t4u5v6w7x8y9z2a3b4c5d6e7f8g9h2j.onion",
+    "docs": "https://drpc.org/docs/tor",
+    "onionUrl": "7ikxpzt676bjj3vvgdfafryn3qtyvhf4oscja3wzv6ga2nzo2z3ugoqd.onion/ethereum/public",
     "types": ["no-api-key"],
-    "tags": [".onion", "WIP"],
+    "tags": [".onion"],
     "category": "rpc-provider"
   },
   {
