@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { Container, Box } from '@chakra-ui/react';
 import Header from './components/Header';
 import SearchFilter from './components/SearchFilter';
+import CategoryNav from './components/CategoryNav';
 import CategorySection from './components/CategorySection';
 import type { Item } from './types';
 
@@ -60,6 +61,15 @@ function App() {
     (item) => item.category === 'wallet-sdk'
   );
 
+  // Define categories for navigation
+  const categories = [
+    { id: 'wallets', name: 'Wallets' },
+    { id: 'rpc-providers', name: 'RPC Providers' },
+    { id: 'explorers', name: 'Explorers' },
+    { id: 'loadbalancers', name: 'Load Balancers' },
+    { id: 'wallet-sdks', name: 'Wallet SDKs' },
+  ];
+
   return (
     <Box minH="100vh">
       <Header />
@@ -71,6 +81,7 @@ function App() {
           onTagChange={setSelectedTag}
           availableTags={availableTags}
         />
+        <CategoryNav categories={categories} />
 
         <CategorySection title="Wallets" items={wallets} id="wallets" />
         <CategorySection
