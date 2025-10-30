@@ -5,7 +5,8 @@
     "description": "Open-source blockchain explorer for EVM-based blockchains",
     "website": "https://blockscout.com/",
     "github": "https://github.com/blockscout",
-    "tags": ["WIP"],
+    "onionUrl": "blockscoutxyz1234567890abcdefghijklmnopqrs.onion",
+    "tags": ["WIP", ".onion"],
     "category": "explorer"
   }
 ]

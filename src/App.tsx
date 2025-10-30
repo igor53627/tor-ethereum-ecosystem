@@ -3,6 +3,7 @@ import { Container, Box } from '@chakra-ui/react';
 import Header from './components/Header';
 import SearchFilter from './components/SearchFilter';
 import CategorySection from './components/CategorySection';
+import Footer from './components/Footer';
 import type { Item } from './types';
 
 // Import data
@@ -89,11 +90,12 @@ function App() {
           id="loadbalancers"
         />
         <CategorySection
-          title="Wallet SDKs"
+          title="SDKs"
           items={walletSdks}
-          id="wallet-sdks"
+          id="sdks"
         />
       </Container>
+      <Footer />
     </Box>
   );
 }
