@@ -1,0 +1,12 @@
+[
+  {
+    "id": "tornado-cash",
+    "name": "Tornado.Cash",
+    "description": "Privacy solution for Ethereum transactions using zero-knowledge proofs. Frontend hosting by cp0x.",
+    "website": "https://pi.cp0x.com/",
+    "github": "https://github.com/cp0x-org/pi-tornado-cash",
+    "onionUrl": "http://cpxtor3q3klwgvk722swah7jbvz3vsoqvye5skun6tarseayw5uvpayd.onion/",
+    "tags": [".onion"],
+    "category": "frontend"
+  }
+]
