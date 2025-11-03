@@ -33,4 +33,9 @@ export interface Explorer extends BaseItem {
   onionUrl?: string;
 }
 
-export type Item = Wallet | RPCProvider | LoadBalancer | WalletSDK | Explorer;
+export interface Frontend extends BaseItem {
+  category: 'frontend';
+  onionUrl?: string;
+}
+
+export type Item = Wallet | RPCProvider | LoadBalancer | WalletSDK | Explorer | Frontend;

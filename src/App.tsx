@@ -12,6 +12,7 @@ import rpcProvidersData from './data/rpc-providers.json';
 import explorersData from './data/explorers.json';
 import loadbalancersData from './data/loadbalancers.json';
 import walletSdksData from './data/wallet-sdks.json';
+import frontendsData from './data/frontends.json';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -24,6 +25,7 @@ function App() {
     ...explorersData,
     ...loadbalancersData,
     ...walletSdksData,
+    ...frontendsData,
   ] as Item[];
 
   // Get all unique tags
@@ -60,6 +62,9 @@ function App() {
   const walletSdks = filteredItems.filter(
     (item) => item.category === 'wallet-sdk'
   );
+  const frontends = filteredItems.filter(
+    (item) => item.category === 'frontend'
+  );
 
   return (
     <Box minH="100vh">
@@ -84,6 +89,7 @@ function App() {
           items={explorers}
           id="explorers"
         />
+        <CategorySection title="Frontends" items={frontends} id="frontends" />
         <CategorySection
           title="Load Balancers"
           items={loadbalancers}
