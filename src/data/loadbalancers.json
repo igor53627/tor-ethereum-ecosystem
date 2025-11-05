@@ -2,7 +2,7 @@
   {
     "id": "nodecore",
     "name": "NodeCore",
-    "description": "High-performance load balancer for Ethereum nodes with Tor support in development",
+    "description": "High-performance load balancer for Ethereum nodes with Tor support",
     "website": "https://nodecore.io",
     "github": "https://github.com/nodecore",
     "docsLinks": [
