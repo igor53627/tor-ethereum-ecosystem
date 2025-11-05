@@ -20,13 +20,15 @@ jobs:
         id: extract
         run: |
           echo "Extracting URLs from data files..."
-          # Extract all URLs from JSON files (website, github, docs, onionUrl, docsLinks)
+          # Extract all URLs from JSON files (website, github, docs, docsLinks)
+          # Exclude .onion URLs as they require Tor network to check
           find src/data -name "*.json" -exec cat {} \; | \
-            grep -oE '"(website|github|docs|onionUrl|url)"\s*:\s*"[^"]+' | \
+            grep -oE '"(website|github|docs|url)"\s*:\s*"[^"]+' | \
             grep -oE 'https?://[^"]+' | \
+            grep -v '\.onion' | \
             sort -u > urls.txt
 
-          echo "Found $(wc -l < urls.txt) unique URLs"
+          echo "Found $(wc -l < urls.txt) unique URLs (excluding .onion URLs)"
           cat urls.txt
 
       - name: Check links with Lychee
