@@ -3,7 +3,7 @@
     "id": "kohaku",
     "name": "Kohaku",
     "description": "Privacy-focused wallet SDK with Tor support under development",
-    "github": "https://github.com/kohaku-wallet",
+    "github": "https://github.com/ethereum/kohaku",
     "tags": ["WIP"],
     "category": "wallet-sdk"
   },

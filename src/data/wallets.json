@@ -23,7 +23,7 @@
     "name": "Brume Wallet",
     "description": "Ethereum wallet with integrated Snowflake proxy for enhanced privacy",
     "website": "https://brume.money",
-    "github": "https://github.com/brumewallet",
+    "github": "https://github.com/brumeproject/wallet",
     "tags": ["snowflake"],
     "category": "wallet",
     "memo": "memos/brume.md"
@@ -41,7 +41,7 @@
     "id": "lunascape-wallet",
     "name": "Lunascape Wallet",
     "description": "Browser with built-in wallet with Tor support under development",
-    "website": "https://lunascape.io",
+    "website": "https://www.lunascape.org/en",
     "tags": ["snowflake", "WIP"],
     "category": "wallet"
   },
