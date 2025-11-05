@@ -2,10 +2,20 @@
   {
     "id": "nodecore",
     "name": "NodeCore",
-    "description": "High-performance load balancer for Ethereum nodes with Tor support in development",
+    "description": "High-performance load balancer for Ethereum nodes with Tor support",
     "website": "https://nodecore.io",
     "github": "https://github.com/nodecore",
-    "tags": [".onion", "WIP"],
+    "docsLinks": [
+      {
+        "label": "Running NodeCore as a Tor Hidden Service",
+        "url": "https://github.com/drpcorg/nodecore/blob/main/docs/nodecore/07-tor-setup.md"
+      },
+      {
+        "label": "Configure .onion upstream",
+        "url": "https://github.com/drpcorg/nodecore/blob/main/docs/nodecore/05-upstream-config.md#tor-onion-upstreams"
+      }
+    ],
+    "tags": [".onion"],
     "category": "loadbalancer"
   },
   {

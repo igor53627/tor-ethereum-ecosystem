@@ -14,8 +14,12 @@ import {
   Badge,
   Button,
   useDisclosure,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from '@chakra-ui/react';
-import { FaGithub, FaExternalLinkAlt, FaCopy, FaCheck, FaFileAlt, FaBook } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaCopy, FaCheck, FaFileAlt, FaBook, FaChevronDown } from 'react-icons/fa';
 import { SiTorbrowser } from 'react-icons/si';
 import StatusBadge from './StatusBadge';
 import MemoModal from './MemoModal';
@@ -131,6 +135,41 @@ const ItemCard = ({ item }: ItemCardProps) => {
                   <Text>Docs</Text>
                 </HStack>
               </Link>
+            )}
+            {item.docsLinks && item.docsLinks.length > 0 && (
+              <Menu>
+                <MenuButton
+                  as={Button}
+                  size="sm"
+                  variant="ghost"
+                  colorScheme="tor"
+                  rightIcon={<FaChevronDown />}
+                  leftIcon={<FaBook />}
+                  fontSize="sm"
+                  fontWeight="normal"
+                  px={2}
+                  h="auto"
+                  minH={0}
+                >
+                  Docs
+                </MenuButton>
+                <MenuList>
+                  {item.docsLinks.map((docLink, index) => (
+                    <MenuItem
+                      key={index}
+                      as={Link}
+                      href={docLink.url}
+                      isExternal
+                      _hover={{ textDecoration: 'none' }}
+                    >
+                      <HStack spacing={2}>
+                        <FaExternalLinkAlt size={12} />
+                        <Text>{docLink.label}</Text>
+                      </HStack>
+                    </MenuItem>
+                  ))}
+                </MenuList>
+              </Menu>
             )}
             {item.memo && (
               <Button
