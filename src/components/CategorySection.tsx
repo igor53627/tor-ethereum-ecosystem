@@ -35,7 +35,7 @@ const CategorySection = ({ title, items, id }: CategorySectionProps) => {
           />
         </Link>
       </HStack>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6} alignItems="stretch">
         {items.map((item) => (
           <ItemCard key={item.id} item={item} />
         ))}

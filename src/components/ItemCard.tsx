@@ -47,9 +47,9 @@ const ItemCard = ({ item }: ItemCardProps) => {
   };
 
   return (
-    <Card variant="elevated" size="sm">
-      <CardBody>
-        <VStack align="stretch" spacing={3}>
+    <Card variant="elevated" size="sm" h="100%">
+      <CardBody display="flex" flexDirection="column">
+        <VStack align="stretch" spacing={3} flex="1">
           <Flex justify="space-between" align="start">
             <Heading size="md" fontFamily="heading">
               {item.name}
@@ -111,7 +111,7 @@ const ItemCard = ({ item }: ItemCardProps) => {
             </HStack>
           )}
 
-          <HStack spacing={3} pt={2}>
+          <HStack spacing={3} pt={2} mt="auto">
             {item.website && (
               <Link href={item.website} isExternal>
                 <HStack spacing={1} fontSize="sm" color="tor.500">
