@@ -1,3 +1,8 @@
+export interface DocLink {
+  label: string;
+  url: string;
+}
+
 export interface BaseItem {
   id: string;
   name: string;
@@ -5,6 +10,7 @@ export interface BaseItem {
   website?: string;
   github?: string;
   docs?: string;
+  docsLinks?: DocLink[];
   tags: string[];
   category: string;
   memo?: string;

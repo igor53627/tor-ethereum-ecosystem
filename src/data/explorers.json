@@ -3,10 +3,10 @@
     "id": "blockscout",
     "name": "Blockscout",
     "description": "Open-source blockchain explorer for EVM-based blockchains",
-    "website": "https://blockscout.com/",
+    "website": "https://eth.blockscout.com/",
     "github": "https://github.com/blockscout",
-    "onionUrl": "blockscoutxyz1234567890abcdefghijklmnopqrs.onion",
-    "tags": ["WIP", ".onion"],
+    "onionUrl": "http://jcevta2iwkmce7dkytj2hbhr3qm7eidnbqkotpe2jfx7ldp45dyaehad.onion/",
+    "tags": [".onion"],
     "category": "explorer"
   }
 ]
