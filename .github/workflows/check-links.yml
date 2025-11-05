@@ -1,0 +1,59 @@
+name: Check Links
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/data/**/*.json'
+      - '.github/workflows/check-links.yml'
+  workflow_dispatch:
+
+jobs:
+  link-checker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract URLs from JSON files
+        id: extract
+        run: |
+          echo "Extracting URLs from data files..."
+          # Extract all URLs from JSON files (website, github, docs, docsLinks)
+          # Exclude .onion URLs as they require Tor network to check
+          find src/data -name "*.json" -exec cat {} \; | \
+            grep -oE '"(website|github|docs|url)"\s*:\s*"[^"]+' | \
+            grep -oE 'https?://[^"]+' | \
+            grep -v '\.onion' | \
+            sort -u > urls.txt
+
+          echo "Found $(wc -l < urls.txt) unique URLs (excluding .onion URLs)"
+          cat urls.txt
+
+      - name: Check links with Lychee
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: --verbose --no-progress --accept 200,204,301,302,307,308,429,999 --timeout 30 --max-retries 3 urls.txt
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Create link check report
+        if: failure()
+        run: |
+          echo "## ❌ Link Check Failed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Some links appear to be broken. Please review the output above." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Tips:" >> $GITHUB_STEP_SUMMARY
+          echo "- Check if the URL is correct" >> $GITHUB_STEP_SUMMARY
+          echo "- Verify the website is accessible" >> $GITHUB_STEP_SUMMARY
+          echo "- Some sites may be temporarily down" >> $GITHUB_STEP_SUMMARY
+
+      - name: Success report
+        if: success()
+        run: |
+          echo "## ✅ All Links Valid" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All $(wc -l < urls.txt) URLs have been checked and are working correctly!" >> $GITHUB_STEP_SUMMARY

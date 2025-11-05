@@ -3,8 +3,8 @@
     "id": "nodecore",
     "name": "NodeCore",
     "description": "High-performance load balancer for Ethereum nodes with Tor support",
-    "website": "https://nodecore.io",
-    "github": "https://github.com/nodecore",
+    "website": "https://drpc.org/nodecore-open-source-rpc-infrastructure",
+    "github": "https://github.com/drpcorg/nodecore",
     "docsLinks": [
       {
         "label": "Running NodeCore as a Tor Hidden Service",
