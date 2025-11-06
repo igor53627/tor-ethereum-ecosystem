@@ -23,7 +23,7 @@
     "name": "Dshackle",
     "description": "Fault-tolerant load balancer for blockchain APIs with planned Tor integration",
     "website": "https://github.com/emeraldpay/dshackle",
-    "github": "https://github.com/emeraldpay/dshackle",
+    "github": "https://github.com/igor53627/dshackle/pull/1",
     "tags": [".onion", "WIP"],
     "category": "loadbalancer"
   }
