@@ -1,0 +1,11 @@
+[
+  {
+    "id": "gethrelay",
+    "name": "Gethrelay",
+    "description": "A lightweight Ethereum P2P relay node that forwards blockchain messages between peers without maintaining full blockchain state. Includes JSON-RPC proxy functionality for transaction handling.",
+    "github": "https://github.com/igor53627/gethrelay",
+    "docs": "https://deepwiki.com/igor53627/gethrelay/11-gethrelay-implementation",
+    "tags": ["socks5", ".onion"],
+    "category": "node"
+  }
+]
