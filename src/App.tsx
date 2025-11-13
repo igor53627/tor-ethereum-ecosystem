@@ -13,6 +13,7 @@ import explorersData from './data/explorers.json';
 import loadbalancersData from './data/loadbalancers.json';
 import walletSdksData from './data/wallet-sdks.json';
 import frontendsData from './data/frontends.json';
+import nodesData from './data/nodes.json';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -26,6 +27,7 @@ function App() {
     ...loadbalancersData,
     ...walletSdksData,
     ...frontendsData,
+    ...nodesData,
   ] as Item[];
 
   // Get all unique tags
@@ -65,6 +67,7 @@ function App() {
   const frontends = filteredItems.filter(
     (item) => item.category === 'frontend'
   );
+  const nodes = filteredItems.filter((item) => item.category === 'node');
 
   return (
     <Box minH="100vh">
@@ -100,6 +103,7 @@ function App() {
           items={walletSdks}
           id="sdks"
         />
+        <CategorySection title="Nodes" items={nodes} id="nodes" />
       </Container>
       <Footer />
     </Box>
