@@ -44,8 +44,21 @@ export interface Frontend extends BaseItem {
   onionUrl?: string;
 }
 
+export interface IPFSGateway extends BaseItem {
+  category: 'ipfs-gateway';
+  onionUrl?: string;
+}
+
 export interface Node extends BaseItem {
   category: 'node';
 }
 
-export type Item = Wallet | RPCProvider | LoadBalancer | WalletSDK | Explorer | Frontend | Node;
+export type Item =
+  | Wallet
+  | RPCProvider
+  | LoadBalancer
+  | WalletSDK
+  | Explorer
+  | Frontend
+  | IPFSGateway
+  | Node;

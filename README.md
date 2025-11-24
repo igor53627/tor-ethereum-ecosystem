@@ -6,7 +6,7 @@ A comprehensive directory of privacy-preserving tools and infrastructure for the
 
 ## Overview
 
-This website showcases wallets, RPC providers, explorers, load balancers, and SDKs that integrate Tor to enhance privacy and censorship resistance for Ethereum users.
+This website showcases wallets, RPC providers, explorers, IPFS gateways, load balancers, and SDKs that integrate Tor to enhance privacy and censorship resistance for Ethereum users.
 
 ## Features
 
@@ -66,6 +66,7 @@ We welcome contributions from the community! Here's how you can help:
    - `wallets.json` - for wallets
    - `rpc-providers.json` - for RPC providers
    - `explorers.json` - for blockchain explorers
+   - `ipfs-gateways.json` - for IPFS gateways
    - `loadbalancers.json` - for load balancers
    - `wallet-sdks.json` - for wallet SDKs
 
@@ -136,6 +137,7 @@ tor-ethereum-ecosystem/
 │   │   ├── wallets.json
 │   │   ├── rpc-providers.json
 │   │   ├── explorers.json
+│   │   ├── ipfs-gateways.json
 │   │   ├── loadbalancers.json
 │   │   └── wallet-sdks.json
 │   ├── theme/               # Chakra UI theme
