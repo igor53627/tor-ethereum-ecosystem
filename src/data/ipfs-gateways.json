@@ -1,8 +1,8 @@
 [
   {
-    "id": "ipfs-foundation",
-    "name": "IPFS Foundation",
-    "description": "Public IPFS gateway operated by the IPFS Foundation with Tor accessibility for censorship-resistant content retrieval.",
+    "id": "ipfs-community",
+    "name": "IPFS Community",
+    "description": "Public IPFS gateway operated by the IPFS Community with Tor accessibility for censorship-resistant content retrieval.",
     "website": "https://docs.ipfs.tech/concepts/public-utilities/",
     "onionUrl": "http://bafyipfs3jww2tpw3c7q2z2gzshe3gz3ofmk3zboweeevkuz5spm6aid.onion/",
     "tags": [".onion"],
