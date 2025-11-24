@@ -14,6 +14,7 @@ import loadbalancersData from './data/loadbalancers.json';
 import walletSdksData from './data/wallet-sdks.json';
 import frontendsData from './data/frontends.json';
 import nodesData from './data/nodes.json';
+import ipfsGatewaysData from './data/ipfs-gateways.json';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -27,6 +28,7 @@ function App() {
     ...loadbalancersData,
     ...walletSdksData,
     ...frontendsData,
+    ...ipfsGatewaysData,
     ...nodesData,
   ] as Item[];
 
@@ -58,14 +60,17 @@ function App() {
   const explorers = filteredItems.filter(
     (item) => item.category === 'explorer'
   );
+  const frontends = filteredItems.filter(
+    (item) => item.category === 'frontend'
+  );
   const loadbalancers = filteredItems.filter(
     (item) => item.category === 'loadbalancer'
   );
   const walletSdks = filteredItems.filter(
     (item) => item.category === 'wallet-sdk'
   );
-  const frontends = filteredItems.filter(
-    (item) => item.category === 'frontend'
+  const ipfsGateways = filteredItems.filter(
+    (item) => item.category === 'ipfs-gateway'
   );
   const nodes = filteredItems.filter((item) => item.category === 'node');
 
@@ -102,6 +107,11 @@ function App() {
           title="SDKs"
           items={walletSdks}
           id="sdks"
+        />
+        <CategorySection
+          title="IPFS Gateways"
+          items={ipfsGateways}
+          id="ipfs-gateways"
         />
         <CategorySection title="Nodes" items={nodes} id="nodes" />
       </Container>
