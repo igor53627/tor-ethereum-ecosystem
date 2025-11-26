@@ -29,5 +29,16 @@
     "types": ["no-api-key"],
     "tags": [".onion", "WIP"],
     "category": "rpc-provider"
+  },
+  {
+    "id": "flashbots",
+    "name": "Flashbots",
+    "description": "Flashbots Protect RPC with MEV protection via Tor hidden service",
+    "website": "https://protectrpc.flashbots.net/",
+    "github": "https://github.com/flashbots/onion-protect-rpc",
+    "onionUrl": "protectfbnoqyfgo3t5ouw3c7odp55qqoxnfdd7u24nzz5pkbclbzzyd.onion",
+    "types": ["no-api-key"],
+    "tags": [".onion"],
+    "category": "rpc-provider"
   }
 ]

@@ -4,6 +4,9 @@ import { FaSearch } from 'react-icons/fa';
 interface SearchFilterProps {
   searchTerm: string;
   onSearchChange: (value: string) => void;
+  selectedCategory: string;
+  onCategoryChange: (value: string) => void;
+  availableCategories: { value: string; label: string }[];
   selectedTag: string;
   onTagChange: (value: string) => void;
   availableTags: string[];
@@ -12,6 +15,9 @@ interface SearchFilterProps {
 const SearchFilter = ({
   searchTerm,
   onSearchChange,
+  selectedCategory,
+  onCategoryChange,
+  availableCategories,
   selectedTag,
   onTagChange,
   availableTags,
@@ -30,6 +36,21 @@ const SearchFilter = ({
           _dark={{ bg: 'gray.700' }}
         />
       </InputGroup>
+      <Select
+        value={selectedCategory}
+        onChange={(e) => onCategoryChange(e.target.value)}
+        size="lg"
+        maxW="250px"
+        bg="white"
+        _dark={{ bg: 'gray.700' }}
+      >
+        <option value="">All Categories</option>
+        {availableCategories.map((cat) => (
+          <option key={cat.value} value={cat.value}>
+            {cat.label}
+          </option>
+        ))}
+      </Select>
       <Select
         value={selectedTag}
         onChange={(e) => onTagChange(e.target.value)}
