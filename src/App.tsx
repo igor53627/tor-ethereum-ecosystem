@@ -16,8 +16,20 @@ import frontendsData from './data/frontends.json';
 import nodesData from './data/nodes.json';
 import ipfsGatewaysData from './data/ipfs-gateways.json';
 
+const categories = [
+  { value: 'wallet', label: 'Wallets' },
+  { value: 'rpc-provider', label: 'RPC Providers' },
+  { value: 'explorer', label: 'Explorers' },
+  { value: 'frontend', label: 'Frontends' },
+  { value: 'loadbalancer', label: 'Load Balancers' },
+  { value: 'wallet-sdk', label: 'SDKs' },
+  { value: 'ipfs-gateway', label: 'IPFS Gateways' },
+  { value: 'node', label: 'Nodes' },
+];
+
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedTag, setSelectedTag] = useState('');
 
   // Combine all data
@@ -41,16 +53,18 @@ function App() {
     return Array.from(tags).sort();
   }, []);
 
-  // Filter items based on search and tag
+  // Filter items based on search, category, and tag
   const filteredItems = useMemo(() => {
     return allItems.filter((item) => {
       const matchesSearch = item.name
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
+      const matchesCategory =
+        selectedCategory === '' || item.category === selectedCategory;
       const matchesTag = selectedTag === '' || item.tags.includes(selectedTag);
-      return matchesSearch && matchesTag;
+      return matchesSearch && matchesCategory && matchesTag;
     });
-  }, [searchTerm, selectedTag, allItems]);
+  }, [searchTerm, selectedCategory, selectedTag, allItems]);
 
   // Separate items by category
   const wallets = filteredItems.filter((item) => item.category === 'wallet');
@@ -81,6 +95,9 @@ function App() {
         <SearchFilter
           searchTerm={searchTerm}
           onSearchChange={setSearchTerm}
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+          availableCategories={categories}
           selectedTag={selectedTag}
           onTagChange={setSelectedTag}
           availableTags={availableTags}
