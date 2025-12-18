@@ -11,26 +11,6 @@
     "category": "rpc-provider"
   },
   {
-    "id": "public-nodes",
-    "name": "Public Nodes",
-    "description": "Community-maintained public RPC endpoints for Ethereum and other chains",
-    "website": "https://publicnode.com",
-    "onionUrl": "pubnode7k3m5n6p7q8r9s2t3u4v5w6x7y8z9a2b3c4d5e6f7g8h9j2k3.onion",
-    "types": ["no-api-key"],
-    "tags": [".onion", "WIP"],
-    "category": "rpc-provider"
-  },
-  {
-    "id": "llama-nodes",
-    "name": "Llama Nodes",
-    "description": "Fast and free RPC with automatic MEV protection from frontrunning and sandwich attacks",
-    "website": "https://llamanodes.com/",
-    "onionUrl": "llama5n6p7q8r9s2t3u4v5w6x7y8z9a2b3c4d5e6f7g8h9j2k3l4m.onion",
-    "types": ["no-api-key"],
-    "tags": [".onion", "WIP"],
-    "category": "rpc-provider"
-  },
-  {
     "id": "flashbots",
     "name": "Flashbots",
     "description": "Flashbots Protect RPC with MEV protection via Tor hidden service",
