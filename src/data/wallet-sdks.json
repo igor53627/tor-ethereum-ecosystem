@@ -1,10 +1,11 @@
 [
   {
-    "id": "kohaku",
-    "name": "Kohaku",
-    "description": "Privacy-focused wallet SDK with Tor support under development",
-    "github": "https://github.com/ethereum/kohaku",
-    "tags": ["WIP"],
+    "id": "webtor-rs",
+    "name": "webtor-rs",
+    "description": "Rust library for Web3 over Tor",
+    "github": "https://github.com/igor53627/webtor-rs",
+    "website": "https://igor53627.github.io/webtor-rs/",
+    "tags": [],
     "category": "wallet-sdk"
   },
   {
