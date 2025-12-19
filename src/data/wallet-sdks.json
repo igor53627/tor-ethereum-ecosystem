@@ -20,9 +20,8 @@
     "id": "tor-js",
     "name": "tor-js",
     "description": "JavaScript library for Tor network integration",
-    "github": "https://github.com/voltrevo/keynet",
+    "github": "https://github.com/voltrevo/tor-js",
     "website": "https://voltrevo.github.io/tor-js/",
-    "docs": "https://github.com/voltrevo/keynet/blob/main/MANUAL_SETUP.md",
     "tags": [],
     "category": "wallet-sdk"
   }
