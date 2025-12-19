@@ -15,5 +15,14 @@
     "github": "https://github.com/CPerezz/torpc",
     "tags": [".onion"],
     "category": "wallet-sdk"
+  },
+  {
+    "id": "tor-js",
+    "name": "tor-js",
+    "description": "JavaScript library for Tor network integration",
+    "github": "https://github.com/voltrevo/tor-js",
+    "website": "https://voltrevo.github.io/tor-js/",
+    "tags": [],
+    "category": "wallet-sdk"
   }
 ]
